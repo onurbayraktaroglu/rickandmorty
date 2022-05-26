@@ -1,5 +1,6 @@
 import './App.scss';
 import React from 'react';
+import { Link } from "react-router-dom";
 
 class App extends React.Component {
     constructor(props) {
@@ -53,7 +54,10 @@ class App extends React.Component {
                     {character.map(item => (
                         <div key={item.id} className='col-lg-4 col-md-4 col-sm-6 product-box'>
                           <div className='left'>
-                            <img src={item.image} alt={item.name}/>
+                            <a href={`/detail/${item.id}`}><img src={item.image} alt={item.name}/></a>
+                            <Link to={`/detail/${item.id}`}>
+                              <img src={item.image} alt={item.name}/>
+                            </Link>
                           </div>
                           <div className='right'>
                             <div className='section'>
