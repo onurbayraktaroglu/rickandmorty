@@ -21,12 +21,28 @@ export const Detail = () => {
 
     useEffect(() => {
         fetchData()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       }, []);
 
 
     return (
         <div className='App'>
-            <p>{char.name}</p>
+             <div className='container'>
+                  <div className='row'>
+                    <div className='profile-detail'>
+                        <div className='view'>
+                            <img src={char.image} alt={char.name}/>
+                        </div>
+                        <div className='description'>
+                            <p>{char.name}</p>
+                            <span className='status'><span className='status__icon'></span>{char.status} - {char.species}</span>
+                            <p className='text-gray'>Last known location:</p>
+                        </div>
+                        
+                    </div>
+                  </div>
+             </div>
+            
         </div>
     );
 

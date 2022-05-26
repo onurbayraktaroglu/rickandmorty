@@ -90,4 +90,24 @@ body {
             }
         }
     }
+    .profile-detail {
+        margin-top: 40px;
+        display: flex;
+        background-color: #3c3e44;
+        padding: 20px;
+        border-radius: 20px;
+
+        .view {
+            img {
+                max-width: 180px;
+                border-radius: 20px;
+            }
+            
+        }
+        .description {
+            padding-left: 20px;
+
+            
+        }
+    }
 }
